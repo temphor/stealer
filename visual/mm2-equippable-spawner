@@ -263,14 +263,6 @@ local function spawn(name)
     end)
 end
 
-task.spawn(function()
-    local i = 0
-    for name in pairs(data) do
-        i = i + 1
-        spawn(name)
-        task.wait(0.02)
-    end
-end)
 
 local eq = {Knife = nil, Gun = nil}
 pcall(function()
@@ -338,3 +330,81 @@ player.CharacterAdded:Connect(function(c)
         end
     end)
 end)
+
+
+local WindUI = loadstring(game:HttpGet(
+    "https://github.com/Footagesus/WindUI/releases/latest/download/main.lua",
+    true
+))()
+
+local window = WindUI:CreateWindow({
+    Title = "Horizon Hub",
+    Icon = "sword",
+    Author = "Temphor",
+    Folder = "HOrizon",
+    Size = UDim2.fromOffset(550, 420),
+    Transparent = true,
+    Theme = "Dark",
+    Resizable = true
+})
+
+local tab = window:Tab({
+    Title = "Skins",
+    Icon = "gem"
+})
+
+local skins = {}
+
+local function refreshSkins()
+    skins = {}
+    for name in pairs(data) do
+        skins[#skins + 1] = name
+    end
+    table.sort(skins, function(a, b)
+        return a:lower() < b:lower()
+    end)
+end
+
+refreshSkins()
+
+local selectedSkin = skins[1]
+
+local dropdown = tab:Dropdown({
+    Title = "Select Skin",
+    Values = skins,
+    Value = selectedSkin,
+    Multi = false,
+    AllowNone = false,
+    SearchBarEnabled = true,
+
+    Callback = function(value)
+        selectedSkin = value
+    end
+})
+
+tab:Button({
+    Title = "Spawn Selected",
+    Icon = "plus",
+
+    Callback = function()
+        if selectedSkin and data[selectedSkin] then
+            spawn(selectedSkin)
+
+            WindUI:Notify({
+                Title = "Spawned",
+                Content = selectedSkin,
+                Duration = 2
+            })
+        end
+    end
+})
+
+tab:Button({
+    Title = "Refresh",
+    Icon = "refresh-cw",
+
+    Callback = function()
+        refreshSkins()
+        dropdown:Refresh(skins)
+    end
+})
